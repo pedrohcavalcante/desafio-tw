@@ -1,0 +1,23 @@
+{
+  "name": "desafio-tw",
+  "version": "1.0.0",
+  "description": "MarsAir challenge for Thoughtworks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pedrohcavalcante/desafio-tw.git"
+  },
+  "author": "Pedro Cavalcante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrohcavalcante/desafio-tw/issues"
+  },
+  "homepage": "https://github.com/pedrohcavalcante/desafio-tw#readme",
+  "devDependencies": {
+    "cypress": "^14.5.3",
+    "cypress-xpath": "^2.0.1"
+  }
+}
