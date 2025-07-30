@@ -171,11 +171,16 @@ describe('Promotional Codes', () => {
         /**
          * Validates a coupon
          */
-        let code = 'JJ5-OPQ-320'
+        let code = 'JJ4-OPQ-329'
         let code_amount = parseInt(code.charAt(2))
         let random_one = parseInt(code.charAt(8))
         let random_two = parseInt(code.charAt(9))
         let check_digit = parseInt(code.charAt(10))
         expect(check_digit).to.equal((code_amount + random_one + random_two) % 10)
+        main_page.departing_drop_down().select('July')
+        main_page.returning_drop_down().select('December (two years from now)')
+        main_page.promotional_code_text_field().type(code)
+        main_page.search_button().click()
+        search_page.promo_code().should('contain', `Promotional code ${code} used: 40% discount`)
     })
 })
